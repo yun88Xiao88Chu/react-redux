@@ -1,10 +1,7 @@
 import React,{ Component } from "react";
-//引入connect
-import { connect } from "react-redux";
-//引入更新的方法
-import { increment,decrement,incrementAsync } from "../redux/actions/count";
 
-class Count extends Component{
+
+export default class Count extends Component{
 
   increment = ()=>{
     //获取用户的输入
@@ -53,14 +50,3 @@ class Count extends Component{
     )
   }
 }
-
-
-export default connect(
-  state => ({
-    count:state.number,
-    personCount:state.persons.length
-  }),
-  
-  {increment,decrement,incrementAsync} 
-  
-  )(Count)

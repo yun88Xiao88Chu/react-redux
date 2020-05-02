@@ -29,9 +29,7 @@ export default class Count extends Component{
   incrementAsync = ()=>{
     //函数体
     const {value} = this.refs.userSd
-    setTimeout(() => {
-      this.props.increment(value*1)
-    }, 900);
+    this.props.incrementAsync(value*1,800)
   }
 
   render(){

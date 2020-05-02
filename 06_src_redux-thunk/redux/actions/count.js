@@ -12,4 +12,3 @@ export const incrementAsync = (value,time) => {
     }, time);
   }
 }
-
